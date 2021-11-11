@@ -11,4 +11,4 @@ while(counter < 10000):
     person = requests.get('https://randomuser.me/api/')
     data = json.dumps(person.json())
     print(data)
-    client.putRecord(StreamName='randomUser', Data=data, PartitionKey=pKey)
+    client.put_record(StreamName='randomUser', Data=data, PartitionKey=pKey)
