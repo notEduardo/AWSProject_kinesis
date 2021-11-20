@@ -1,9 +1,11 @@
 # AWSProject Kinesis
 
-This project contains components to setup an AWS infrastructure. This AWS structure uses Kinesis to ingest, structure and store, all in AWS.
+This project contains components to setup an AWS infrastructure. This AWS structure uses Kinesis Data Stream to ingest data, Lambda to restructure the data and Kinesis firehose to store the data in S3. The data stream is created with an EC2 instance calling https://randomuser.me/api/ and feeding the data to Kinesis Data Stream.
 
-EC2 Instance: Takes information from an API that generates a random user (https://randomuser.me/api/)
+## Services Used:
 
-Kinesis Data Streams: Ingests and transforms the data
-
-Kinesis Firehose: Takes data from Kinesis Data Streams, and stores it in S3
+- EC2 Instance
+- Kinesis Data Stream
+- Kinesis Firehose
+- Lambda 
+- S3
